@@ -1,11 +1,7 @@
 <div id="fb-root"></div>
 <script src="https://connect.facebook.net/en_US/sdk.js"></script>
 <script>
-FB.init({
-	appId   : 1866747600266711,
-	status  : true,
-	xfbml   : true,
-	version : 'v2.9'
-});
-FB.AppEvents.logPageView();
+	FB.api('/DoctorKoWJ', {fields: 'fan_count'}, (response) => {
+	    console.log(response);
+	});
 </script>
